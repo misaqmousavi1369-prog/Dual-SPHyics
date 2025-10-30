@@ -1,0 +1,51 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2025 by
+ Dr Jose M. Dominguez Alonso, Prof. Alejandro Crespo,
+ Dr Georgios Fourtakas, Prof. Benedict Rogers,
+ Dr Renato Vacondio, Dr Corrado Altomare,
+ Dr Angelo Tafuni, Dr Orlando Garcia Feal,
+ Dr Ivan Martinez Estevez, Dr Joseph O'Connor,
+ Dr Aaron English, Dr Francesco Ricci,
+ Prof. Moncho Gomez Gesteira, Prof. Peter Stansby
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+ Free download source files and documentation from DualSPHysics website (http://dual.sphysics.org).
+ Full list of developers and contributors is available at https://dual.sphysics.org/developers
+ Properly cite the use of DualSPHysics (Dominguez et al., 2022) (https://dual.sphysics.org/references).
+
+
+DualSPHysics5 v5.4.355 (08-04-2025)
+====================================
+Threads by host for parallel execution: 16
+[Initialising JSphCpuSingle  13-10-2025 18:03:27]
+ProgramFile=".../bin/windows/DualSPHysics5.4CPU_win64.exe"
+Available features: Project Chrono coupling, MoorDynPlus coupling, Wave generation, FlexStruc, mDBC no-slip, OpenMP execution.
+ExecutionDir=".../DualSPHysics_v5.4/bin/windows"
+XmlFile=".../weir_channel_case/01_case/Case_Def.xml"
+OutputDir=".../DualSPHysics_v5.4/weir_channel_case/02_run"
+OutputDataDir=".../weir_channel_case/02_run/data"
+XML-App: DualSPHysics5 v5.4
+
+*** Exception (JXml::ErrReadElement) at DualSPHysics/source/JXml.cpp:239
+Text: Error reading xml - Some element is missing 'data2d'
+File: ..\..\weir_channel_case\01_case/Case_Def.xml(row:9)
+
+
+Finished execution (code=1).
+

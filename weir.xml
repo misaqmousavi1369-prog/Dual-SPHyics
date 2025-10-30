@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<case>
+  <sim>
+    <name>test_min</name>
+    <deltap>0.02</deltap>
+    <gravity>0.0 0.0 -9.81</gravity>
+    <tend>0.5</tend>
+    <dt>1e-4</dt>
+  </sim>
+  <domain>
+    <posmin x="0.0" y="0.0" z="0.0"/>
+    <posmax x="2.0" y="0.5" z="1.0"/>
+  </domain>
+  <geometry>
+    <stl name="weir" file="../00_geometry/weir.stl" scale="1.0"/>
+  </geometry>
+  <commands>
+    <setdrawmode mode="full"/>
+    <createbox name="fluidbox" p1="0 0 0" p2="2 0.5 0.5" dp="0.02"/>
+    <drawmode object="fluidbox" mode="fill"/>
+    <drawmode object="weir" mode="bound"/>
+  </commands>
+  <mainlist>
+    <list name="make_case" printcall="false">
+      <command value="resetdraw"/>
+      <command value="drawmode" args="object=fluidbox mode=fill"/>
+      <command value="drawmode" args="object=weir mode=bound"/>
+      <command value="save"/>
+    </list>
+    <list name="main" printcall="false">
+      <command value="make_case"/>
+    </list>
+  </mainlist>
+</case>
