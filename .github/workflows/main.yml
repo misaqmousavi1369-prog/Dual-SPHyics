@@ -1,0 +1,31 @@
+name: Test DualSPHysics XML
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display repo files
+        shell: pwsh
+        run: |
+          Write-Host "=== Repository Contents ==="
+          Get-ChildItem -Recurse
+
+      - name: Test weir.xml syntax
+        shell: pwsh
+        run: |
+          Write-Host "=== Checking XML validity ==="
+          try {
+            [xml]$xml = Get-Content ./weir.xml
+            Write-Host "✅ XML file loaded successfully."
+          }
+          catch {
+            Write-Host "❌ XML syntax error detected."
+            Write-Error $_
+          }
